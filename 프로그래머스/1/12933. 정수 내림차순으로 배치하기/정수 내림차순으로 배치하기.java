@@ -25,3 +25,27 @@ class Solution {
         return answer;
     }
 }
+
+/*
+class Solution {
+	String strN = "";
+    public long solution(long n) {
+    	strN = "";
+    	Long.toString(n).chars().sorted().forEach(c -> strN = Character.valueOf((char)c)+strN);
+    	return Long.parseLong(strN);
+}
+    }
+    */
+/*
+class Solution{
+	public long solution(long n) {
+		long answer;
+		String[] arr = String.valueOf(n).split("");
+		Arrays.sort(arr);
+		StringBuilder sb = new StringBuilder();
+		for (String nArr : arr) sb.append(nArr);
+		answer = Long.parseLong(sb.reverse().toString());
+		return answer;
+	}
+}
+*/
