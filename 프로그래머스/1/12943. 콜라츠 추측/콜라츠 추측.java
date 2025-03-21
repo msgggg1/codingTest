@@ -8,6 +8,7 @@ class Solution {
 				
 			if (cnt >= 500) return -1;
 			
+            // num = num%2==0? num/2 : num*3+1
 				if (num%2==0) {
 					num /= 2;
 				}
