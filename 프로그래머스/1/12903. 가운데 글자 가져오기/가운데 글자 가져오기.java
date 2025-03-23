@@ -15,3 +15,15 @@ class Solution {
         return s.length()%2==0 ? "" + sList.get(index-1)+sList.get(index) : sList.get(index)+"";
     }
 }
+
+/*
+class Solution {
+    public String solution(String s) {
+        String answer = "";
+        
+        int index = s.length()/2;
+        
+        return s.length()%2 == 0 ? s.substring(index-1,index+1) :  ""+s.charAt(index);
+    }
+}
+*/
