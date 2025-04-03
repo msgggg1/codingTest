@@ -2,6 +2,7 @@ import java.util.Arrays;
 import java.util.Scanner;
 import java.util.stream.Stream;
 
+// 내 풀이
 class Solution {
 	public int[] solution(int []arr) {
 
@@ -18,6 +19,5 @@ class Solution {
 				if (arr[j] != -1) answer[idx++] = arr[j]; 
 			}
         return answer;
-        //		return Arrays.stream(arr).
 	}
 }
