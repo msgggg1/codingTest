@@ -1,3 +1,4 @@
+// 내 코드
 class Solution {
     public int solution(String s) {
         int answer = 0;
@@ -39,3 +40,26 @@ class Solution {
     }
 }
 
+// 다른 풀이
+/*
+class Solution { 
+    public int solution(String s) { 
+        int answer = 0; 
+        int cnt = 0; 
+        char x = 0; 
+        
+        for (int i = 0; i < s.length(); i++) { 
+            char c = s.charAt(i); 
+            if (cnt == 0) { 
+                x = c; cnt = 1; 
+            } else { 
+                cnt += (c == x) ? 1 : -1; 
+            } if (cnt == 0) { 
+                answer++; 
+            } 
+        } 
+        if (cnt > 0) answer++;
+        return answer; 
+    } 
+}
+*/
