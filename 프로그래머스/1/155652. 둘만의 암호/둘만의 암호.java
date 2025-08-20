@@ -1,5 +1,6 @@
 import java.util.ArrayList;
 
+// 내 풀이
 class Solution {
     public String solution(String s, String skip, int index) {
         
@@ -11,19 +12,38 @@ class Solution {
 			list.remove((Character)skip.charAt(i));
 		}
         
-        ArrayList<Character> slist = new ArrayList<Character>();
         StringBuilder answer = new StringBuilder();
+        
         for (int i = 0; i < s.length(); i++) {
-			slist.add(s.charAt(i));
-		}
-        for (int i = 0; i < slist.size(); i++) {
-        	int cindex = list.indexOf(slist.get(i));
+        	int cindex = list.indexOf(s.charAt(i));
         	int newindex = (cindex+index)%list.size();	
-        	slist.set(i, list.get(newindex));	
-        	answer.append(slist.get(i));
+        	answer.append(list.get(newindex));
 
 		}
         
         return answer.toString();
     }
 }
+
+//
+/*
+class Solution {
+    public String solution(String s, String skip, int index) {
+        StringBuilder answer = new StringBuilder();
+
+        for (char letter : s.toCharArray()) {
+            char temp = letter;
+            int idx = 0;
+            while (idx < index) {
+                temp = temp == 'z' ? 'a' : (char) (temp + 1);
+                if (!skip.contains(String.valueOf(temp))) {
+                    idx += 1;
+                }
+            }
+            answer.append(temp);
+        }
+
+        return answer.toString();
+    }
+}
+*/
