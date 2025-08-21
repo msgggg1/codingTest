@@ -51,3 +51,5 @@ class Solution {
 		return answer;
 	}
 }
+
+// stack 이용하기
