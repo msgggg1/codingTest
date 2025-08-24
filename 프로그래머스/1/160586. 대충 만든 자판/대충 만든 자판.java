@@ -48,20 +48,19 @@ class Solution {
         
         for (int j = 0 ; j < targets.length ; j++) {
         	String t = targets[j];
-        	int cnt = 0;
+        	int sum = 0;
 			for (int i = 0; i < t.length(); i++) {
 				char c = t.charAt(i);
 				if (!hm.containsKey(c)) {
-					answer[j] = -1;
+					sum = -1;
 					break;
 				} 
                 
-                cnt += hm.get(c);
+                sum += hm.get(c);
 				
 			}
-             if(answer[j] == 0){
-			answer[j] = cnt;
-		}
+			answer[j] = sum;
+		
         
     }
         return answer;
