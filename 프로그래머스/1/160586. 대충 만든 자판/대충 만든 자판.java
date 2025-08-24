@@ -1,3 +1,4 @@
+/* 내 풀이
 class Solution {
     public int[] solution(String[] keymap, String[] targets) {
         int[] answer = new int [targets.length];
@@ -24,4 +25,46 @@ class Solution {
         
         return answer;
     }
+}
+*/
+//HashMap 이용
+import java.util.HashMap;
+
+class Solution {
+    public int[] solution(String[] keymap, String[] targets) {
+        int[] answer = new int [targets.length];
+        
+        HashMap<Character, Integer> hm = new HashMap<Character, Integer>();
+        
+        for (String key : keymap) {
+			for (int i = 0; i < key.length(); i++) {
+				char c = key.charAt(i);
+				
+				if (hm.containsKey(c)) {
+					hm.put(c, Math.min(hm.get(c), i+1));
+				} else { hm.put(c, i+1);} 
+			}
+		}
+        
+        for (int j = 0 ; j < targets.length ; j++) {
+        	String t = targets[j];
+        	int cnt = 0;
+			for (int i = 0; i < t.length(); i++) {
+				char c = t.charAt(i);
+				if (!hm.containsKey(c)) {
+					answer[j] = -1;
+					break;
+				} 
+                
+                cnt += hm.get(c);
+				
+			}
+             if(answer[j] == 0){
+			answer[j] = cnt;
+		}
+        
+    }
+        return answer;
+    }
+    
 }
