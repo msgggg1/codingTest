@@ -1,3 +1,29 @@
+// 내 풀이
+class Solution {
+    public int solution(String[][] board, int h, int w) {
+        int answer = 0;
+        String color = board[h][w];
+        int hlength = board.length -1;
+        int wwidth = board[h].length -1;
+        if (h > 0 && board[h-1][w].equals(color)) {
+        		answer++;		
+		}
+        if (w > 0 && board[h][w-1].equals(color)) {
+        	answer++;		
+		}
+        if (w < wwidth && board[h][w+1].equals(color)) {
+        	answer++;			
+		}
+        if (h < hlength && board[h+1][w].equals(color)) {
+        	answer++;		
+		}
+               		
+        return answer;
+    }
+}
+
+
+/*
 class Solution {
     public int solution(String[][] board, int h, int w) {
         int answer = 0;
@@ -23,3 +49,4 @@ class Solution {
         return answer;
     }
 }
+*/
