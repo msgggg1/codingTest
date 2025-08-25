@@ -13,7 +13,7 @@ class Solution {
 					if (t == win_nums[j]) {
 						score ++;
 					}
-				} // for
+				} 
 			}
 		}
         
