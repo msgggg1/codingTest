@@ -27,3 +27,6 @@ class Solution {
     	
     }
 }
+
+// 다른 풀이
+// PriorityQueue<Integer> pq1 = new PriorityQueue<>(Collections.reverseOrder()); 를 이용
