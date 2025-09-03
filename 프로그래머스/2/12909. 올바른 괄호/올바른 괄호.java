@@ -25,3 +25,5 @@ class Solution {
         
     }
 }
+
+/* Stack 안쓴 풀이 : count ++ , count -- , count < 0 -> false */
