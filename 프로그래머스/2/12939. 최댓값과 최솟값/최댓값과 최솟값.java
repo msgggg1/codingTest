@@ -17,6 +17,13 @@ class Solution {
             }
         }
         
+        /*
+        StringBuffer sb = new StringBuffer();
+        sb.append(Arrays.stream(is).min().getAsInt());
+        sb.append(" ");
+        sb.append(Arrays.stream(is).max().getAsInt());
+        */
+        
         
         return min + " " + max;
     }
