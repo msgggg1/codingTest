@@ -17,3 +17,11 @@ class Solution {
         
     }
 }
+
+/*
+    int sum = 45;
+        for (int i : numbers) {
+            sum -= i;
+        }
+        return sum;
+*/
